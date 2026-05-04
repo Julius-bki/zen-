@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "zen-gui",
+  "version": "1.0.0",
+  "name": "Zen GUI",
+  "description": "Vanilla config screen replacement for the zen skyblock mod",
+  "authors": [],
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.zengui.ZenConfigMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "fabric": "*",
+    "minecraft": "~1.21"
+  }
+}
