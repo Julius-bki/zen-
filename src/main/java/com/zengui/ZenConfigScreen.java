@@ -194,25 +194,6 @@ public class ZenConfigScreen extends class_437 {
         return super.method_25404(event);
     }
 
-    // Fallback: mouseButton event (press/release/repeat)
-    @Override
-    public boolean method_25402(net.minecraft.class_11909 event, boolean focused) {
-        int mx = (int) event.comp_4798();
-        int my = (int) event.comp_4799();
-        lastMouseX = mx;
-        lastMouseY = my;
-        int button = event.comp_4797();
-        int action = event.comp_4800().comp_4801(); // 0=release 1=press 2=repeat
-        if (action != 0 && button == 0) { // press or repeat, left button
-            if (handleModuleClick(mx, my)) {
-                dbgLast = "25402 toggle: " + mx + "," + my;
-                dbgMs = System.currentTimeMillis();
-                return true;
-            }
-        }
-        return super.method_25402(event, focused);
-    }
-
     private boolean handleModuleClick(int mx, int my) {
         int H = this.field_22790;
         JsonObject cats = config.getAsJsonObject("categories");
